@@ -248,89 +248,61 @@
 </a>
 
 </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>México Slideshow</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; background: #fff; }
-
-    .slideshow-container {
-      position: relative;
-      max-width: 700px;
-      margin: 40px auto;
-      overflow: hidden;
-    }
-
-    .slide {
-      display: none;
-      position: absolute;
-      width: 100%;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .slide img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .active {
-      display: block;
-      opacity: 1;
-    }
-
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 12px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 22px;
-      transition: 0.3s;
-      user-select: none;
-      border-radius: 0 3px 3px 0;
-      background-color: rgba(0,0,0,0.4);
-    }
-
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    @media (max-width: 768px) {
-      .slideshow-container {
-        max-width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<div class="slideshow-container">
-  <div class="slide active"><img src="./1849E87E-8704-4BA4-803C-1C4FBD7E47FF.png" alt="Trikot 1"></div>
-  <div class="slide"><img src="./2ACE5EB4-0301-4BA8-A646-8E7E4BBE85E4.jpeg" alt="Trikot 2"></div>
-  <div class="slide"><img src="./716AFB94-C220-43A0-ACD2-9A1F7D964A0D.jpeg" alt="Trikot 3"></div>
-  <div class="slide"><img src="./BA9C6113-48B5-484B-B1E7-CD339246EE4C.jpeg" alt="Trikot 4"></div>
-  <div class="slide"><img src="./C79EE722-CC2E-49B0-B314-59113A09065E.png" alt="Trikot 5"></div>
-  <div class="slide"><img src="./D8D90BA6-7D25-41A0-9214-EB387C05B417.jpeg" alt="Trikot 6"></div>
-  <div class="slide"><img src="./DA23AA2B-E68B-45F1-9B23-CAEF804EE678.jpeg" alt="Trikot 7"></div>
+  <div class="slideshow-container">
+  <div class="slide active"><img src="https://tabmex2023.github.io/FutRep/IMG_3220.png" alt="Trikot 1"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3221.png" alt="Trikot 2"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3222.png" alt="Trikot 3"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3223.png" alt="Trikot 4"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3224.png" alt="Trikot 5"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3225.png" alt="Trikot 6"></div>
 
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
+
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    overflow: hidden;
+  }
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .active {
+    display: block;
+    opacity: 1;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 0 3px 3px 0;
+    transform: translateY(-50%);
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+</style>
 
 <script>
   let slideIndex = 0;
@@ -358,6 +330,5 @@
 
   setInterval(autoSlide, 3000);
 </script>
-
-</body>
 </html>
+
