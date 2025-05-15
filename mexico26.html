@@ -2,57 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Especial México – FutRep.com</title>
+  <title>FutRep.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
       background-color: white;
     }
 
     header {
-      background-color: #c9e7ae;
+      background-color: #c2df9f;
       padding: 10px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     header img {
       height: 50px;
     }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
+    .menu-icon {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
     }
 
     nav a {
       text-decoration: none;
       color: #004400;
       font-weight: bold;
-      font-size: 14px;
     }
 
-    .intro {
-      padding: 30px;
-      text-align: center;
+    .nav-links {
+      display: flex;
+      gap: 15px;
     }
 
-    .intro h1 {
-      color: #006600;
-      font-size: 24px;
-    }
-
-    .intro p {
-      font-size: 16px;
-      color: #333;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #c2df9f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .menu-icon {
+        display: block;
+      }
     }
 
     .whatsapp-float {
@@ -76,47 +80,43 @@
       width: 30px;
       height: 30px;
     }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/assets/futrep-logo.png" alt="FutRep Logo">
-    <nav>
-      <a href="/index.html">Inicio</a>
-      <a href="/mexico26.html">México Especial</a>
-      <a href="/alemania.html">Alemania</a>
-      <a href="/arabia.html">Arabia Saudita</a>
-      <a href="/argentina.html">Argentina</a>
-      <a href="/brasil.html">Brasil</a>
-      <a href="/colombia.html">Colombia</a>
-      <a href="/españa.html">España</a>
-      <a href="/francia.html">Francia</a>
-      <a href="/italia.html">Italia</a>
-      <a href="/usa.html">USA</a>
-      <!-- Füge hier weitere Länder ein -->
-    </nav>
-  </header>
-
-  <div class="intro">
-    <h1>🇲🇽 Especial México – Rumbo al Mundial 2026</h1>
-    <p>
-      Prepárate para apoyar al Tricolor con nuestra exclusiva colección de productos para la Copa Mundial 2026. 
-      Encuentra banderas, bufandas, gorras, pancartas gigantes, camisetas edición especial y kits de animación para toda la familia. 
-      ¡Haz que tu pasión se vea y se sienta en cada partido!
-    </p>
-  </div>
-
-  <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<header>
+  <a href="/index.html">
+    <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
   </a>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="/index.html">Inicio</a>
+    <a href="/mexico26.html">México Especial</a>
+    <a href="/alemania.html">Alemania</a>
+    <a href="/arabia.html">Arabia Saudita</a>
+    <a href="/argentina.html">Argentina</a>
+    <a href="/brasil.html">Brasil</a>
+    <a href="/colombia.html">Colombia</a>
+    <a href="/españa.html">España</a>
+    <a href="/francia.html">Francia</a>
+    <a href="/italia.html">Italia</a>
+    <a href="/japon.html">Japón</a>
+    <a href="/usa.html">USA</a>
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+</script>
+
+<a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- HIER KOMMT DEIN INDIVIDUELLER SEITENINHALT -->
 
 </body>
 </html>
