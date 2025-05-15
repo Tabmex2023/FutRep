@@ -128,92 +128,7 @@
     }
   </style>
 </head>
-<!-- Slideshow Start -->
-<div class="slideshow-container">
-  <div class="slide active"><img src="https://tabmex2023.github.io/FutRep/IMG_3220.png" alt="Trikot 1"></div>
-  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3221.png" alt="Trikot 2"></div>
-  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3222.png" alt="Trikot 3"></div>
-  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3223.png" alt="Trikot 4"></div>
-  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3224.png" alt="Trikot 5"></div>
-  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3225.png" alt="Trikot 6"></div>
-
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-
-<style>
-  .slideshow-container {
-    position: relative;
-    max-width: 700px;
-    margin: 40px auto;
-    overflow: hidden;
-  }
-  .slide {
-    display: none;
-    position: absolute;
-    width: 100%;
-    transition: opacity 0.5s ease-in-out;
-  }
-  .slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  .active {
-    display: block;
-    opacity: 1;
-  }
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    user-select: none;
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 0 3px 3px 0;
-    transform: translateY(-50%);
-  }
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-</style>
-
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      if (i === index) slide.classList.add("active");
-    });
-  }
-
-  function plusSlides(n) {
-    slideIndex += n;
-    if (slideIndex >= slides.length) slideIndex = 0;
-    if (slideIndex < 0) slideIndex = slides.length - 1;
-    showSlide(slideIndex);
-  }
-
-  function autoSlide() {
-    slideIndex++;
-    if (slideIndex >= slides.length) slideIndex = 0;
-    showSlide(slideIndex);
-  }
-
-  setInterval(autoSlide, 3000);
-</script>
-<!-- Slideshow Ende -->
   <body>
-
 <header>
   <a href="/index.html">
     <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
@@ -330,8 +245,89 @@
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
+<!-- Slideshow Start -->
+<div class="slideshow-container">
+  <div class="slide active"><img src="https://tabmex2023.github.io/FutRep/IMG_3220.png" alt="Trikot 1"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3221.png" alt="Trikot 2"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3222.png" alt="Trikot 3"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3223.png" alt="Trikot 4"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3224.png" alt="Trikot 5"></div>
+  <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3225.png" alt="Trikot 6"></div>
 
-</body>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto;
+    overflow: hidden;
+  }
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .active {
+    display: block;
+    opacity: 1;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 0 3px 3px 0;
+    transform: translateY(-50%);
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+</style>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    showSlide(slideIndex);
+  }
+
+  function autoSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    showSlide(slideIndex);
+  }
+
+  setInterval(autoSlide, 3000);
 </script>
+<!-- Slideshow Ende -->
+</body>
 </html>
-
