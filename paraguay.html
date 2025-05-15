@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Paraguay – FutRep.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: white;
+    }
+
+    header {
+      background-color: #c2df9f;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: #004400;
+      user-select: none;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #c2df9f;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #004400;
+      font-weight: bold;
+    }
+
+    .nav-links.open {
+      display: flex;
+    }
+
+    .intro {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .intro h1 {
+      color: #006600;
+      font-size: 26px;
+    }
+
+    .intro img {
+      width: 70%;
+      max-width: 400px;
+      margin: 20px 0;
+      border: 2px solid #ccc;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/index.html">
+    <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
+  </a>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav class="nav-links" id="navLinks">
+  <a href="/index.html">Inicio</a>
+  <a href="/mexico26.html">México Especial</a>
+  <a href="/méxico.html">México</a>
+</nav>
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+</script>
+
+<div class="intro">
+  <h1>🇵🇾 Paraguay</h1>
+  <img src="https://flagcdn.com/w640/py.png" alt="Bandera de Paraguay">
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
