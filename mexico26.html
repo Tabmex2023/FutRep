@@ -27,13 +27,21 @@
     .menu-icon {
       font-size: 28px;
       cursor: pointer;
-      display: none;
+      color: #004400;
+      user-select: none;
     }
 
     .nav-links {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+      display: none;
+      flex-direction: column;
+      background-color: #c2df9f;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      gap: 10px;
+      z-index: 1000;
     }
 
     .nav-links a {
@@ -42,25 +50,8 @@
       font-weight: bold;
     }
 
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #c2df9f;
-        flex-direction: column;
-        padding: 10px;
-        gap: 10px;
-        z-index: 1000;
-      }
-      .nav-links.open {
-        display: flex;
-      }
+    .nav-links.open {
+      display: flex;
     }
 
     .intro {
@@ -111,38 +102,39 @@
     <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
   </a>
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
-  <nav class="nav-links" id="navLinks">
-    <a href="/index.html">Inicio</a>
-    <a href="/mexico26.html">México Especial</a>
-    <a href="/alemania.html">Alemania</a>
-    <a href="/arabia-saudita.html">Arabia Saudita</a>
-    <a href="/argentina.html">Argentina</a>
-    <a href="/australia.html">Australia</a>
-    <a href="/bélgica.html">Bélgica</a>
-    <a href="/brasil.html">Brasil</a>
-    <a href="/chile.html">Chile</a>
-    <a href="/china.html">China</a>
-    <a href="/colombia.html">Colombia</a>
-    <a href="/corea-del-sur.html">Corea del Sur</a>
-    <a href="/ecuador.html">Ecuador</a>
-    <a href="/españa.html">España</a>
-    <a href="/estados-unidos.html">Estados Unidos</a>
-    <a href="/francia.html">Francia</a>
-    <a href="/holanda.html">Holanda</a>
-    <a href="/inglaterra.html">Inglaterra</a>
-    <a href="/italia.html">Italia</a>
-    <a href="/japón.html">Japón</a>
-    <a href="/méxico.html">México</a>
-    <a href="/panamá.html">Panamá</a>
-    <a href="/paraguay.html">Paraguay</a>
-    <a href="/perú.html">Perú</a>
-    <a href="/portugal.html">Portugal</a>
-    <a href="/suecia.html">Suecia</a>
-    <a href="/suiza.html">Suiza</a>
-    <a href="/uruguay.html">Uruguay</a>
-    <a href="/venezuela.html">Venezuela</a>
-  </nav>
 </header>
+
+<nav class="nav-links" id="navLinks">
+  <a href="/index.html">Inicio</a>
+  <a href="/mexico26.html">México Especial</a>
+  <a href="/alemania.html">Alemania</a>
+  <a href="/arabia-saudita.html">Arabia Saudita</a>
+  <a href="/argentina.html">Argentina</a>
+  <a href="/australia.html">Australia</a>
+  <a href="/bélgica.html">Bélgica</a>
+  <a href="/brasil.html">Brasil</a>
+  <a href="/chile.html">Chile</a>
+  <a href="/china.html">China</a>
+  <a href="/colombia.html">Colombia</a>
+  <a href="/corea-del-sur.html">Corea del Sur</a>
+  <a href="/ecuador.html">Ecuador</a>
+  <a href="/españa.html">España</a>
+  <a href="/estados-unidos.html">Estados Unidos</a>
+  <a href="/francia.html">Francia</a>
+  <a href="/holanda.html">Holanda</a>
+  <a href="/inglaterra.html">Inglaterra</a>
+  <a href="/italia.html">Italia</a>
+  <a href="/japón.html">Japón</a>
+  <a href="/méxico.html">México</a>
+  <a href="/panamá.html">Panamá</a>
+  <a href="/paraguay.html">Paraguay</a>
+  <a href="/perú.html">Perú</a>
+  <a href="/portugal.html">Portugal</a>
+  <a href="/suecia.html">Suecia</a>
+  <a href="/suiza.html">Suiza</a>
+  <a href="/uruguay.html">Uruguay</a>
+  <a href="/venezuela.html">Venezuela</a>
+</nav>
 
 <script>
   function toggleMenu() {
