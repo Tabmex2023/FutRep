@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <header>
-  <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" 
-       alt="FutRep Logo" 
-       style="height: 100px; display: block; margin: 20px auto;">
-  <h1 style="text-align:center;">FutRep.com</h1>
-</header>
   <meta charset="UTF-8">
+  <title>FutRep.com – Camisetas de Fútbol</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FutRep.com – Inicio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,79 +11,81 @@
       background-color: white;
     }
 
-    nav {
+    header {
       background-color: #c2df9f;
       padding: 10px 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
     }
 
-    nav li {
-      margin-right: 15px;
+    header img {
+      height: 50px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      text-align: center;
-      padding: 30px 15px 20px 15px;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 0 20px 20px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .mexico-special {
-      text-align: center;
-      background-color: #f4f4f4;
-      padding: 25px 15px;
-      margin: 30px auto 10px auto;
-      border: 2px dashed #004400;
-    }
-
-    .mexico-special h2 {
-      font-size: 22px;
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
       color: #004400;
     }
 
-    .mexico-special p {
-      margin-top: 8px;
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #c2df9f;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      gap: 10px;
+      z-index: 1000;
     }
 
-    .mexico-special img {
-      width: 40px;
-      vertical-align: middle;
-      margin: 0 5px;
+    .nav-links.open {
+      display: flex;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #004400;
+      font-weight: bold;
+    }
+
+    .intro {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .intro h1 {
+      color: #006600;
+      font-size: 26px;
+    }
+
+    .intro p {
+      font-size: 16px;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .catalog {
+      padding: 20px;
+      text-align: center;
     }
 
     table {
       width: 100%;
       text-align: center;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
       border-collapse: collapse;
     }
 
     td {
-      padding: 12px;
+      padding: 10px;
     }
 
     a {
@@ -98,6 +94,7 @@
     }
 
     a:hover {
+      text-decoration: underline;
       color: #002233;
     }
 
@@ -129,105 +126,118 @@
       width: 30px;
       height: 30px;
     }
-
-    @media (max-width: 600px) {
-      table td {
-        font-size: 12px;
-        padding: 8px;
-      }
-
-      .mexico-special h2 {
-        font-size: 18px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#mexico">México Especial</a></li>
-      <li><a href="#catalogo">Catálogo A–Z</a></li>
-    </ul>
-  </nav>
-
-  <header>
-    <h1>FutRep.com</h1>
-  </header>
-
-  <div class="intro">
-    <h2>¡Bienvenido a FutRep.com!</h2>
-    <p>En FutRep te ofrecemos camisetas réplica de alta calidad de selecciones nacionales y equipos de todo el mundo – a precios justos y accesibles.</p>
-    <p>Nuestra misión es que todos puedan lucir con orgullo los colores de su equipo favorito, sin pagar precios excesivos. Todos los modelos están disponibles en varias tallas y con detalles cuidadosamente trabajados.</p>
-    <p><strong>¿Qué ofrecemos?</strong><br>
-      • Réplicas de camisetas de la selección mexicana, clubes de la Liga MX y equipos internacionales.<br>
-      • Modelos actualizados, tallas completas y calidad premium.<br>
-      • Atención personalizada y envío a todo México.</p>
-  </div>
-
-  <div class="mexico-special" id="mexico">
-    <h2>
-      <img src="https://flagcdn.com/w40/mx.png"> 
-      <a href="https://www.futrep.com/mexico26" style="color:#004400;">México Especial – Rumbo al Mundial 2026</a>
-      <img src="https://flagcdn.com/w40/mx.png">
-    </h2>
-    <p>Todo lo que necesitas para apoyar a México en el Mundial: camisetas, bufandas, gorras, fanbox y más.</p>
-  </div>
-
-  <div id="catalogo">
-    <table class="flag-table">
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/alemania"><img src="https://flagcdn.com/w40/de.png" class="flag"> Alemania</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/arabia-saudita"><img src="https://flagcdn.com/w40/sa.png" class="flag"> Arabia Saudita</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/argentina"><img src="https://flagcdn.com/w40/ar.png" class="flag"> Argentina</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/australia"><img src="https://flagcdn.com/w40/au.png" class="flag"> Australia</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/belgica"><img src="https://flagcdn.com/w40/be.png" class="flag"> Bélgica</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/brasil"><img src="https://flagcdn.com/w40/br.png" class="flag"> Brasil</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/chile"><img src="https://flagcdn.com/w40/cl.png" class="flag"> Chile</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/china"><img src="https://flagcdn.com/w40/cn.png" class="flag"> China</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/colombia"><img src="https://flagcdn.com/w40/co.png" class="flag"> Colombia</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/corea-del-sur"><img src="https://flagcdn.com/w40/kr.png" class="flag"> Corea del Sur</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/ecuador"><img src="https://flagcdn.com/w40/ec.png" class="flag"> Ecuador</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/espana"><img src="https://flagcdn.com/w40/es.png" class="flag"> España</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/estados-unidos"><img src="https://flagcdn.com/w40/us.png" class="flag"> Estados Unidos</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/francia"><img src="https://flagcdn.com/w40/fr.png" class="flag"> Francia</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/holanda"><img src="https://flagcdn.com/w40/nl.png" class="flag"> Holanda</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/inglaterra"><img src="https://flagcdn.com/w40/gb-eng.png" class="flag"> Inglaterra</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/italia"><img src="https://flagcdn.com/w40/it.png" class="flag"> Italia</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/japon"><img src="https://flagcdn.com/w40/jp.png" class="flag"> Japón</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/mexico"><img src="https://flagcdn.com/w40/mx.png" class="flag"> México</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/panama"><img src="https://flagcdn.com/w40/pa.png" class="flag"> Panamá</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/paraguay"><img src="https://flagcdn.com/w40/py.png" class="flag"> Paraguay</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/peru"><img src="https://flagcdn.com/w40/pe.png" class="flag"> Perú</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/portugal"><img src="https://flagcdn.com/w40/pt.png" class="flag"> Portugal</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/suecia"><img src="https://flagcdn.com/w40/se.png" class="flag"> Suecia</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://tabmex2023.github.io/FutRep/suiza"><img src="https://flagcdn.com/w40/ch.png" class="flag"> Suiza</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/uruguay"><img src="https://flagcdn.com/w40/uy.png" class="flag"> Uruguay</a></td>
-    <td><a href="https://tabmex2023.github.io/FutRep/venezuela"><img src="https://flagcdn.com/w40/ve.png" class="flag"> Venezuela</a></td>
-  </tr>
-</table>
-  </div>
-
-  <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<header>
+  <a href="/index.html">
+    <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
   </a>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav class="nav-links" id="navLinks">
+  <a href="/index.html">Inicio</a>
+  <a href="/mexico26.html">México Especial</a>
+  <a href="/alemania.html">Alemania</a>
+  <a href="/arabia-saudita.html">Arabia Saudita</a>
+  <a href="/argentina.html">Argentina</a>
+  <a href="/australia.html">Australia</a>
+  <a href="/belgica.html">Bélgica</a>
+  <a href="/brasil.html">Brasil</a>
+  <a href="/chile.html">Chile</a>
+  <a href="/china.html">China</a>
+  <a href="/colombia.html">Colombia</a>
+  <a href="/corea-del-sur.html">Corea del Sur</a>
+  <a href="/ecuador.html">Ecuador</a>
+  <a href="/espana.html">España</a>
+  <a href="/estados-unidos.html">Estados Unidos</a>
+  <a href="/francia.html">Francia</a>
+  <a href="/holanda.html">Holanda</a>
+  <a href="/inglaterra.html">Inglaterra</a>
+  <a href="/italia.html">Italia</a>
+  <a href="/japon.html">Japón</a>
+  <a href="/mexico.html">México</a>
+  <a href="/panama.html">Panamá</a>
+  <a href="/paraguay.html">Paraguay</a>
+  <a href="/peru.html">Perú</a>
+  <a href="/portugal.html">Portugal</a>
+  <a href="/suecia.html">Suecia</a>
+  <a href="/suiza.html">Suiza</a>
+  <a href="/uruguay.html">Uruguay</a>
+  <a href="/venezuela.html">Venezuela</a>
+</nav>
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+</script>
+
+<div class="intro">
+  <h1>Bienvenido a FutRep.com!</h1>
+  <p>
+    En FutRep te ofrecemos camisetas réplica de alta calidad de selecciones nacionales y equipos de todo el mundo – a precios justos y accesibles.<br>
+    Nuestra misión es que todos puedan lucir con orgullo los colores de su equipo favorito, sin pagar precios excesivos.<br>
+    Todos los modelos están disponibles en varias tallas y con detalles cuidadosamente trabajados.
+  </p>
+</div>
+
+<div class="catalog">
+  <table>
+    <tr>
+      <td><a href="/alemania.html"><img class="flag" src="https://flagcdn.com/w40/de.png"> Alemania</a></td>
+      <td><a href="/arabia-saudita.html"><img class="flag" src="https://flagcdn.com/w40/sa.png"> Arabia Saudita</a></td>
+      <td><a href="/argentina.html"><img class="flag" src="https://flagcdn.com/w40/ar.png"> Argentina</a></td>
+    </tr>
+    <tr>
+      <td><a href="/australia.html"><img class="flag" src="https://flagcdn.com/w40/au.png"> Australia</a></td>
+      <td><a href="/belgica.html"><img class="flag" src="https://flagcdn.com/w40/be.png"> Bélgica</a></td>
+      <td><a href="/brasil.html"><img class="flag" src="https://flagcdn.com/w40/br.png"> Brasil</a></td>
+    </tr>
+    <tr>
+      <td><a href="/chile.html"><img class="flag" src="https://flagcdn.com/w40/cl.png"> Chile</a></td>
+      <td><a href="/china.html"><img class="flag" src="https://flagcdn.com/w40/cn.png"> China</a></td>
+      <td><a href="/colombia.html"><img class="flag" src="https://flagcdn.com/w40/co.png"> Colombia</a></td>
+    </tr>
+    <tr>
+      <td><a href="/corea-del-sur.html"><img class="flag" src="https://flagcdn.com/w40/kr.png"> Corea del Sur</a></td>
+      <td><a href="/ecuador.html"><img class="flag" src="https://flagcdn.com/w40/ec.png"> Ecuador</a></td>
+      <td><a href="/espana.html"><img class="flag" src="https://flagcdn.com/w40/es.png"> España</a></td>
+    </tr>
+    <tr>
+      <td><a href="/estados-unidos.html"><img class="flag" src="https://flagcdn.com/w40/us.png"> Estados Unidos</a></td>
+      <td><a href="/francia.html"><img class="flag" src="https://flagcdn.com/w40/fr.png"> Francia</a></td>
+      <td><a href="/holanda.html"><img class="flag" src="https://flagcdn.com/w40/nl.png"> Holanda</a></td>
+    </tr>
+    <tr>
+      <td><a href="/inglaterra.html"><img class="flag" src="https://flagcdn.com/w40/gb-eng.png"> Inglaterra</a></td>
+      <td><a href="/italia.html"><img class="flag" src="https://flagcdn.com/w40/it.png"> Italia</a></td>
+      <td><a href="/japon.html"><img class="flag" src="https://flagcdn.com/w40/jp.png"> Japón</a></td>
+    </tr>
+    <tr>
+      <td><a href="/mexico.html"><img class="flag" src="https://flagcdn.com/w40/mx.png"> México</a></td>
+      <td><a href="/panama.html"><img class="flag" src="https://flagcdn.com/w40/pa.png"> Panamá</a></td>
+      <td><a href="/paraguay.html"><img class="flag" src="https://flagcdn.com/w40/py.png"> Paraguay</a></td>
+    </tr>
+    <tr>
+      <td><a href="/peru.html"><img class="flag" src="https://flagcdn.com/w40/pe.png"> Perú</a></td>
+      <td><a href="/portugal.html"><img class="flag" src="https://flagcdn.com/w40/pt.png"> Portugal</a></td>
+      <td><a href="/suecia.html"><img class="flag" src="https://flagcdn.com/w40/se.png"> Suecia</a></td>
+    </tr>
+    <tr>
+      <td><a href="/suiza.html"><img class="flag" src="https://flagcdn.com/w40/ch.png"> Suiza</a></td>
+      <td><a href="/uruguay.html"><img class="flag" src="https://flagcdn.com/w40/uy.png"> Uruguay</a></td>
+      <td><a href="/venezuela.html"><img class="flag" src="https://flagcdn.com/w40/ve.png"> Venezuela</a></td>
+    </tr>
+  </table>
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
 
 </body>
 </html>
