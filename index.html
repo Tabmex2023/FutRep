@@ -128,7 +128,8 @@
     }
   </style>
 </head>
-  <body>
+<body>
+
 <header>
   <a href="/index.html">
     <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
@@ -174,15 +175,15 @@
     nav.classList.toggle('open');
   }
 </script>
-
 <div class="intro">
   <h1>Bienvenido a FutRep.com!</h1>
   <p>
     En FutRep te ofrecemos camisetas réplica de alta calidad de selecciones nacionales y equipos de todo el mundo – a precios justos y accesibles.<br>
     Nuestra misión es que todos puedan lucir con orgullo los colores de su equipo favorito, sin pagar precios excesivos.<br>
     Todos los modelos están disponibles en varias tallas y con detalles cuidadosamente trabajados.
+  </p>
+</div>
 
-  </p><!-- Especial México – Rumbo al Mundial 2026 -->
 <div style="text-align: center; margin-top: 40px;">
   <p style="font-size: 1.1em; color: #111; margin-bottom: 10px;">
     Nuestra colección especial con camisetas, accesorios y sorpresas de México – en camino al Mundial 2026.
@@ -225,7 +226,7 @@
       <td><a href="/japón.html"><img class="flag" src="https://flagcdn.com/w40/jp.png"> Japón</a></td>
     </tr>
     <tr>
-      <td><a href="méxico.html"><img class="flag" src="https://flagcdn.com/w40/mx.png"> México</a></td>
+      <td><a href="/méxico.html"><img class="flag" src="https://flagcdn.com/w40/mx.png"> México</a></td>
       <td><a href="/panamá.html"><img class="flag" src="https://flagcdn.com/w40/pa.png"> Panamá</a></td>
       <td><a href="/paraguay.html"><img class="flag" src="https://flagcdn.com/w40/py.png"> Paraguay</a></td>
     </tr>
@@ -245,7 +246,8 @@
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
-<!-- Slideshow Start -->
+
+<!-- Slideshow -->
 <div class="slideshow-container">
   <div class="slide active"><img src="https://tabmex2023.github.io/FutRep/IMG_3220.png" alt="Trikot 1"></div>
   <div class="slide"><img src="https://tabmex2023.github.io/FutRep/IMG_3221.png" alt="Trikot 2"></div>
@@ -257,7 +259,6 @@
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
-
 <style>
   .slideshow-container {
     position: relative;
@@ -303,31 +304,38 @@
 </style>
 
 <script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
+  window.onload = function () {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      if (i === index) slide.classList.add("active");
-    });
-  }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
 
-  function plusSlides(n) {
-    slideIndex += n;
-    if (slideIndex >= slides.length) slideIndex = 0;
-    if (slideIndex < 0) slideIndex = slides.length - 1;
+    function plusSlides(n) {
+      slideIndex += n;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      showSlide(slideIndex);
+    }
+
+    function autoSlide() {
+      slideIndex++;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      showSlide(slideIndex);
+    }
+
+    // Initial anzeigen
     showSlide(slideIndex);
-  }
-
-  function autoSlide() {
-    slideIndex++;
-    if (slideIndex >= slides.length) slideIndex = 0;
-    showSlide(slideIndex);
-  }
-
-  setInterval(autoSlide, 3000);
+    // Automatisch wechseln
+    setInterval(autoSlide, 3000);
+    // Buttons zugänglich machen
+    window.plusSlides = plusSlides;
+  };
 </script>
-<!-- Slideshow Ende -->
+
 </body>
-</html>
+</html>-
