@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alemania - FutRep</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      display: block;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      border-top: 1px solid #333;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .hero-flag {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .hero-flag img {
+      width: 60%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    .clubs {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .club-button {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .jerseys {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 30px 20px;
+    }
+
+    .jersey {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .jersey img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .jersey h3 {
+      margin: 10px 0 5px 0;
+      font-size: 1.1em;
+    }
+
+    .jersey p {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .whatsapp-button img {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="/"><img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo"></a>
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="/">Inicio</a>
+    <a href="/catalogo.html">Catálogo</a>
+    <a href="/mexico26.html">Especial México</a>
+    <a href="/contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<h1>Alemania</h1>
+
+<div class="hero-flag">
+  <img src="https://flagcdn.com/w640/de.png" alt="Bandera de Alemania">
+</div>
+
+<div class="clubs">
+  <button class="club-button">FC Bayern München</button>
+  <button class="club-button">Borussia Dortmund</button>
+</div>
+
+<div class="jerseys">
+  <div class="jersey">
+    <img src="https://via.placeholder.com/200x200?text=Heim+2022" alt="Heimtrikot 2022">
+    <h3>Heimtrikot 2022</h3>
+    <p>400 MXN</p>
+  </div>
+  <div class="jersey">
+    <img src="https://via.placeholder.com/200x200?text=Auswärts+2022" alt="Auswärtstrikot 2022">
+    <h3>Auswärtstrikot 2022</h3>
+    <p>400 MXN</p>
+  </div>
+  <div class="jersey">
+    <img src="https://via.placeholder.com/200x200?text=WM+1990" alt="WM-Trikot 1990">
+    <h3>Trikot WM 1990</h3>
+    <p>400 MXN</p>
+  </div>
+</div>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/5219999999999" target="_blank" class="whatsapp-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  }
+</script>
+
+</body>
+</html>
