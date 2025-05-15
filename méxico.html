@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>México – FutRep.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: white;
+    }
+    header {
+      background-color: #c2df9f;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    header img { height: 50px; }
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: #004400;
+      user-select: none;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #c2df9f;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #004400;
+      font-weight: bold;
+    }
+    .nav-links.open { display: flex; }
+    .intro {
+      padding: 30px;
+      text-align: center;
+    }
+    .intro h1 {
+      color: #006600;
+      font-size: 26px;
+    }
+    .intro img {
+      width: 70%;
+      max-width: 400px;
+      margin: 20px 0;
+      border: 2px solid #ccc;
+    }
+    .clubs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+    .club-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #004400;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .club-button img {
+      width: 24px;
+      height: 24px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/index.html">
+    <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
+  </a>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav class="nav-links" id="navLinks">
+  <a href="/index.html">Inicio</a>
+  <a href="/mexico26.html">México Especial</a>
+  <a href="/méxico.html">México</a>
+</nav>
+
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+</script>
+
+<div class="intro">
+  <h1>🇲🇽 México</h1>
+  <img src="https://flagcdn.com/w640/mx.png" alt="Bandera de México">
+</div>
+<div class="clubs">
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Club_América_logo.svg/120px-Club_América_logo.svg.png" alt="América logo">
+    <span>América</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f7/Atlas_F.C._logo.svg/120px-Atlas_F.C._logo.svg.png" alt="Atlas logo">
+    <span>Atlas</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Atl%C3%A9tico_San_Luis_logo.svg/120px-Atl%C3%A9tico_San_Luis_logo.svg.png" alt="Atlético San Luis logo">
+    <span>Atlético San Luis</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/Cruz_Azul_F.C._logo.svg/120px-Cruz_Azul_F.C._logo.svg.png" alt="Cruz Azul logo">
+    <span>Cruz Azul</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c0/FC_Juarez_Logo.svg/120px-FC_Juarez_Logo.svg.png" alt="FC Juárez logo">
+    <span>FC Juárez</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Chivas_de_Guadalajara_logo.svg/120px-Chivas_de_Guadalajara_logo.svg.png" alt="Guadalajara logo">
+    <span>Guadalajara</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Club_Le%C3%B3n_logo.svg/120px-Club_Le%C3%B3n_logo.svg.png" alt="León logo">
+    <span>León</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Mazatl%C3%A1n_F.C._logo.svg/120px-Mazatl%C3%A1n_F.C._logo.svg.png" alt="Mazatlán logo">
+    <span>Mazatlán</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/15/C.F._Monterrey_crest.svg/120px-C.F._Monterrey_crest.svg.png" alt="Monterrey logo">
+    <span>Monterrey</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Club_Necaxa_logo.svg/120px-Club_Necaxa_logo.svg.png" alt="Necaxa logo">
+    <span>Necaxa</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/CF_Pachuca_logo.svg/120px-CF_Pachuca_logo.svg.png" alt="Pachuca logo">
+    <span>Pachuca</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Club_Puebla_logo.svg/120px-Club_Puebla_logo.svg.png" alt="Puebla logo">
+    <span>Puebla</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/UNAM_Pumas_logo.svg/120px-UNAM_Pumas_logo.svg.png" alt="Pumas UNAM logo">
+    <span>Pumas UNAM</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Quer%C3%A9taro_F.C._logo.svg/120px-Quer%C3%A9taro_F.C._logo.svg.png" alt="Querétaro logo">
+    <span>Querétaro</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Santos_Laguna_logo.svg/120px-Santos_Laguna_logo.svg.png" alt="Santos Laguna logo">
+    <span>Santos Laguna</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Club_Tijuana_logo.svg/120px-Club_Tijuana_logo.svg.png" alt="Tijuana logo">
+    <span>Tijuana</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Deportivo_Toluca_F.C._logo.svg/120px-Deportivo_Toluca_F.C._logo.svg.png" alt="Toluca logo">
+    <span>Toluca</span>
+  </div>
+
+  <div class="club-button">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Tigres_UANL_logo.svg/120px-Tigres_UANL_logo.svg.png" alt="Tigres UANL logo">
+    <span>Tigres UANL</span>
+  </div>
+
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+</body>
+</html>
