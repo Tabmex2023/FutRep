@@ -71,23 +71,36 @@
       border: 2px solid #ccc;
     }
 
-    .clubs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px auto;
-      max-width: 600px;
+    .jersey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
     }
 
-    .club-button {
-      background-color: #004400;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
+    .jersey-item {
+      text-align: center;
+    }
+
+    .jersey-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .jersey-item p {
+      margin-top: 8px;
       font-size: 14px;
-      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .jersey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .whatsapp-float {
@@ -164,44 +177,10 @@
 <div class="intro">
   <h1>🇸🇦 Arabia Saudita</h1>
   <img src="https://flagcdn.com/w640/sa.png" alt="Bandera Arabia Saudita">
+</div>
 
-  <style>
-  .jersey-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-  }
+<div class="jersey-grid">
 
-  .jersey-item {
-    text-align: center;
-  }
-
-  .jersey-item img {
-    width: 100%;
-    max-width: 180px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-
-  .jersey-item p {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #333;
-    font-weight: bold;
-  }
-
-  @media (max-width: 768px) {
-    .jersey-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-</style>
-
-div class="jersey-grid">
-
-  <!-- Trikots Selección Nacional -->
   <div class="jersey-item">
     <a href="https://wa.me/525570593057" target="_blank">
       <img src="https://i.postimg.cc/xTgLNsVq/IMG-3249.png" alt="Arabia Saudita Local 2024">
@@ -216,7 +195,6 @@ div class="jersey-grid">
     <p>Visitante 2024 – 450 MXN</p>
   </div>
 
-  <!-- Trikots Al-N* Club -->
   <div class="jersey-item">
     <a href="https://wa.me/525570593057" target="_blank">
       <img src="https://i.postimg.cc/hvwFjLsj/IMG-3251.png" alt="Al-N Club Local 24/25">
@@ -237,6 +215,7 @@ div class="jersey-grid">
     </a>
     <p>3ra 24/25 (Al-N*) – 450 MXN</p>
   </div>
+
 </div>
 
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
