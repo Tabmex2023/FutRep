@@ -17,7 +17,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
     }
 
     header img {
@@ -71,23 +70,30 @@
       border: 2px solid #ccc;
     }
 
-    .clubs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px auto;
-      max-width: 600px;
+    .jersey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
     }
 
-    .club-button {
-      background-color: #004400;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
+    .jersey-item {
+      text-align: center;
+    }
+
+    .jersey-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .jersey-item p {
+      margin-top: 8px;
       font-size: 14px;
-      cursor: pointer;
+      color: #333;
+      font-weight: bold;
     }
 
     .whatsapp-float {
@@ -111,6 +117,12 @@
       width: 30px;
       height: 30px;
     }
+
+    @media (max-width: 768px) {
+      .jersey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
@@ -126,32 +138,8 @@
   <a href="/index.html">Inicio</a>
   <a href="/mexico26.html">México Especial</a>
   <a href="/alemania.html">Alemania</a>
-  <a href="/arabia-saudita.html">Arabia Saudita</a>
   <a href="/argentina.html">Argentina</a>
-  <a href="/australia.html">Australia</a>
-  <a href="/belgica.html">Bélgica</a>
-  <a href="/brasil.html">Brasil</a>
-  <a href="/chile.html">Chile</a>
-  <a href="/china.html">China</a>
-  <a href="/colombia.html">Colombia</a>
-  <a href="/corea-del-sur.html">Corea del Sur</a>
-  <a href="/ecuador.html">Ecuador</a>
-  <a href="/españa.html">España</a>
-  <a href="/estados-unidos.html">Estados Unidos</a>
-  <a href="/francia.html">Francia</a>
-  <a href="/holanda.html">Holanda</a>
-  <a href="/inglaterra.html">Inglaterra</a>
-  <a href="/italia.html">Italia</a>
-  <a href="/japón.html">Japón</a>
-  <a href="/méxico.html">México</a>
-  <a href="/panamá.html">Panamá</a>
-  <a href="/paraguay.html">Paraguay</a>
-  <a href="/perú.html">Perú</a>
-  <a href="/portugal.html">Portugal</a>
-  <a href="/suecia.html">Suecia</a>
-  <a href="/suiza.html">Suiza</a>
-  <a href="/uruguay.html">Uruguay</a>
-  <a href="/venezuela.html">Venezuela</a>
+  <!-- weitere Links nach Wunsch -->
 </nav>
 
 <script>
@@ -164,8 +152,9 @@
 <div class="intro">
   <h1>🇦🇷 Argentina</h1>
   <img src="https://flagcdn.com/w640/ar.png" alt="Bandera de Argentina">
+</div>
 
-  <div class="jersey-grid">
+<div class="jersey-grid">
 
   <div class="jersey-item">
     <a href="https://wa.me/525570593057" target="_blank">
@@ -217,6 +206,7 @@
   </div>
 
 </div>
+
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
