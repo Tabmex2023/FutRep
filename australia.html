@@ -17,7 +17,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
     }
 
     header img {
@@ -71,6 +70,32 @@
       border: 2px solid #ccc;
     }
 
+    .jersey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .jersey-item {
+      text-align: center;
+    }
+
+    .jersey-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .jersey-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+    }
+
     .whatsapp-float {
       position: fixed;
       top: 50%;
@@ -92,6 +117,12 @@
       width: 30px;
       height: 30px;
     }
+
+    @media (max-width: 768px) {
+      .jersey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body>
@@ -107,32 +138,7 @@
   <a href="/index.html">Inicio</a>
   <a href="/mexico26.html">México Especial</a>
   <a href="/alemania.html">Alemania</a>
-  <a href="/arabia-saudita.html">Arabia Saudita</a>
-  <a href="/argentina.html">Argentina</a>
   <a href="/australia.html">Australia</a>
-  <a href="/belgica.html">Bélgica</a>
-  <a href="/brasil.html">Brasil</a>
-  <a href="/chile.html">Chile</a>
-  <a href="/china.html">China</a>
-  <a href="/colombia.html">Colombia</a>
-  <a href="/corea-del-sur.html">Corea del Sur</a>
-  <a href="/ecuador.html">Ecuador</a>
-  <a href="/españa.html">España</a>
-  <a href="/estados-unidos.html">Estados Unidos</a>
-  <a href="/francia.html">Francia</a>
-  <a href="/holanda.html">Holanda</a>
-  <a href="/inglaterra.html">Inglaterra</a>
-  <a href="/italia.html">Italia</a>
-  <a href="/japón.html">Japón</a>
-  <a href="/méxico.html">México</a>
-  <a href="/panamá.html">Panamá</a>
-  <a href="/paraguay.html">Paraguay</a>
-  <a href="/perú.html">Perú</a>
-  <a href="/portugal.html">Portugal</a>
-  <a href="/suecia.html">Suecia</a>
-  <a href="/suiza.html">Suiza</a>
-  <a href="/uruguay.html">Uruguay</a>
-  <a href="/venezuela.html">Venezuela</a>
 </nav>
 
 <script>
@@ -145,6 +151,24 @@
 <div class="intro">
   <h1>🇦🇺 Australia</h1>
   <img src="https://flagcdn.com/w640/au.png" alt="Bandera de Australia">
+</div>
+
+<div class="jersey-grid">
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/hvfvPvFL/IMG-3262.png" alt="Australia Local 2025">
+    </a>
+    <p>Local 2025 – 450 MXN</p>
+  </div>
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/jSFbtcxF/IMG-3263.jpg" alt="Australia Visitante 2025">
+    </a>
+    <p>Visitante 2025 – 450 MXN</p>
+  </div>
+
 </div>
 
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
