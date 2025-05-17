@@ -17,7 +17,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
     }
 
     header img {
@@ -44,14 +43,14 @@
       z-index: 1000;
     }
 
+    .nav-links.open {
+      display: flex;
+    }
+
     .nav-links a {
       text-decoration: none;
       color: #004400;
       font-weight: bold;
-    }
-
-    .nav-links.open {
-      display: flex;
     }
 
     .intro {
@@ -71,23 +70,30 @@
       border: 2px solid #ccc;
     }
 
-    .clubs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px auto;
-      max-width: 600px;
+    .jersey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
     }
 
-    .club-button {
-      background-color: #004400;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
+    .jersey-item {
+      text-align: center;
+    }
+
+    .jersey-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .jersey-item p {
+      margin-top: 8px;
       font-size: 14px;
-      cursor: pointer;
+      color: #333;
+      font-weight: bold;
     }
 
     .whatsapp-float {
@@ -110,6 +116,12 @@
     .whatsapp-float img {
       width: 30px;
       height: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .jersey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -156,20 +168,45 @@
 
 <script>
   function toggleMenu() {
-    var nav = document.getElementById('navLinks');
-    nav.classList.toggle('open');
+    document.getElementById('navLinks').classList.toggle('open');
   }
 </script>
 
 <div class="intro">
   <h1>🇨🇴 Colombia</h1>
   <img src="https://flagcdn.com/w640/co.png" alt="Bandera de Colombia">
+</div>
 
-  <div class="clubs">
-    <button class="club-button">Atlético Nacional</button>
-    <button class="club-button">Millonarios</button>
-    <button class="club-button">América de Cali</button>
+<div class="jersey-grid">
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/bNhPTqTz/IMG-3333.png" alt="Colombia Local 2024">
+    </a>
+    <p>Local 2024 – 450 MXN</p>
   </div>
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/wMzrhjdZ/IMG-3334.png" alt="Colombia Visitante 2024">
+    </a>
+    <p>Visitante 2024 – 450 MXN</p>
+  </div>
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/J07qrD8r/IMG-3335.png" alt="Millonarios Local 2025">
+    </a>
+    <p>Mil Local 2025 – 450 MXN</p>
+  </div>
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/WbFZM65R/IMG-3336.png" alt="Atlético Nacional Local 2025">
+    </a>
+    <p>AN Local 2025 – 450 MXN</p>
+  </div>
+
 </div>
 
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
