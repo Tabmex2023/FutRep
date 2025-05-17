@@ -17,7 +17,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
     }
 
     header img {
@@ -44,14 +43,14 @@
       z-index: 1000;
     }
 
+    .nav-links.open {
+      display: flex;
+    }
+
     .nav-links a {
       text-decoration: none;
       color: #004400;
       font-weight: bold;
-    }
-
-    .nav-links.open {
-      display: flex;
     }
 
     .intro {
@@ -69,6 +68,32 @@
       max-width: 400px;
       margin: 20px 0;
       border: 2px solid #ccc;
+    }
+
+    .jersey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .jersey-item {
+      text-align: center;
+    }
+
+    .jersey-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .jersey-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
     }
 
     .whatsapp-float {
@@ -91,6 +116,12 @@
     .whatsapp-float img {
       width: 30px;
       height: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .jersey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -137,14 +168,31 @@
 
 <script>
   function toggleMenu() {
-    var nav = document.getElementById('navLinks');
-    nav.classList.toggle('open');
+    document.getElementById('navLinks').classList.toggle('open');
   }
 </script>
 
 <div class="intro">
   <h1>🇨🇭 Suiza</h1>
   <img src="https://flagcdn.com/w640/ch.png" alt="Bandera de Suiza">
+</div>
+
+<div class="jersey-grid">
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/yY5x4gsK/IMG-3367.png" alt="Suiza Local 2024">
+    </a>
+    <p>Local 2024 – 450 MXN</p>
+  </div>
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/Ss3Q0Hbr/IMG-3368.png" alt="Suiza Visitante 2024">
+    </a>
+    <p>Visitante 2024 – 450 MXN</p>
+  </div>
+
 </div>
 
 <a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
