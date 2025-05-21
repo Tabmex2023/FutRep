@@ -2,143 +2,204 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Club América – FutRep.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club América – FutRep</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      margin: 0;
+      background-color: white;
     }
 
     header {
-      background-color: #000;
-      color: white;
+      background-color: #c2df9f;
       padding: 10px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      position: relative;
     }
 
-    .logo {
-      height: 40px;
+    header img {
+      height: 50px;
     }
 
-    .menu-toggle {
-      font-size: 24px;
+    .menu-icon {
+      font-size: 28px;
       cursor: pointer;
+      color: #004400;
+      user-select: none;
     }
 
-    nav {
+    .nav-links {
       display: none;
       flex-direction: column;
-      background-color: #111;
-    }
-
-    nav a {
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-bottom: 1px solid #333;
-    }
-
-    nav a:hover {
-      background-color: #333;
-    }
-
-    .flag {
-      display: block;
-      margin: 20px auto 10px;
-      width: 80px;
-    }
-
-    h1 {
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .product {
-      background: white;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-      width: 250px;
-      text-align: center;
-    }
-
-    .product img {
+      background-color: #c2df9f;
+      position: absolute;
+      top: 60px;
+      left: 0;
       width: 100%;
-      border-radius: 6px;
-    }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 28px;
+      padding: 15px 20px;
+      gap: 10px;
       z-index: 1000;
     }
 
-    @media (min-width: 600px) {
-      nav {
-        display: flex !important;
-        flex-direction: row;
+    .nav-links a {
+      text-decoration: none;
+      color: #004400;
+      font-weight: bold;
+    }
+
+    .nav-links.open {
+      display: flex;
+    }
+
+    .intro {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .intro h1 {
+      color: #006600;
+      font-size: 26px;
+    }
+
+    .intro img {
+      width: 150px;
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .jersey-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .jersey-item {
+      text-align: center;
+    }
+
+    .jersey-item img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .jersey-item p {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .jersey-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav');
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    }
-  </script>
 </head>
 <body>
-  <header>
-    <img src="https://i.postimg.cc/7Y4tNQGr/futrep-logo.png" alt="FutRep Logo" class="logo">
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  </header>
-  <nav id="nav">
-    <a href="index.html">Inicio</a>
-    <a href="catalogo.html">Catálogo</a>
-    <a href="mexico.html">México</a>
-  </nav>
 
-  <img src="https://i.postimg.cc/3RjYkW1r/mexico-flag.png" alt="Bandera de México" class="flag">
-  <h1>Club América</h1>
+<header>
+  <a href="/index.html">
+    <img src="https://raw.githubusercontent.com/Tabmex2023/FutRep/main/FB980D37-2B63-483A-8D2D-88AA782BD82F.png" alt="FutRep Logo">
+  </a>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
 
-  <section class="products">
-    <div class="product">
-      <img src="https://i.postimg.cc/dVyLChpn/america1.jpg" alt="Trikot Heim">
-      <p>Trikot Heim 23/24 – 450 MXN</p>
-    </div>
-    <div class="product">
-      <img src="https://i.postimg.cc/FRz5RTWT/america2.jpg" alt="Trikot Auswärts">
-      <p>Trikot Auswärts 23/24 – 450 MXN</p>
-    </div>
-    <div class="product">
-      <img src="https://i.postimg.cc/Jn7QFf7n/america3.jpg" alt="3. Trikot">
-      <p>3. Trikot 23/24 – 450 MXN</p>
-    </div>
-  </section>
+<nav class="nav-links" id="navLinks">
+  <a href="/index.html">Inicio</a>
+  <a href="/mexico26.html">México Especial</a>
+  <a href="/alemania.html">Alemania</a>
+  <a href="/arabia-saudita.html">Arabia Saudita</a>
+  <a href="/argentina.html">Argentina</a>
+  <a href="/australia.html">Australia</a>
+  <a href="/belgica.html">Bélgica</a>
+  <a href="/brasil.html">Brasil</a>
+  <a href="/chile.html">Chile</a>
+  <a href="/china.html">China</a>
+  <a href="/colombia.html">Colombia</a>
+  <a href="/corea-del-sur.html">Corea del Sur</a>
+  <a href="/ecuador.html">Ecuador</a>
+  <a href="/españa.html">España</a>
+  <a href="/estados-unidos.html">Estados Unidos</a>
+  <a href="/francia.html">Francia</a>
+  <a href="/holanda.html">Holanda</a>
+  <a href="/inglaterra.html">Inglaterra</a>
+  <a href="/italia.html">Italia</a>
+  <a href="/japon.html">Japón</a>
+  <a href="/méxico.html">México</a>
+  <a href="/panamá.html">Panamá</a>
+  <a href="/paraguay.html">Paraguay</a>
+  <a href="/peru.html">Perú</a>
+  <a href="/portugal.html">Portugal</a>
+  <a href="/suecia.html">Suecia</a>
+  <a href="/suiza.html">Suiza</a>
+  <a href="/uruguay.html">Uruguay</a>
+  <a href="/venezuela.html">Venezuela</a>
+</nav>
 
-  <a class="whatsapp-button" href="https://wa.me/5216671932357" target="_blank">💬</a>
+<script>
+  function toggleMenu() {
+    var nav = document.getElementById('navLinks');
+    nav.classList.toggle('open');
+  }
+</script>
+
+<div class="intro">
+  <h1>🇲🇽 Club América</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Club_América_logo_1981.svg/200px-Club_América_logo_1981.svg.png" alt="Club América Logo">
+</div>
+
+<div class="jersey-grid">
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/MKQ2D7xC/IMG-3509.jpg" alt="Local 24/25">
+    </a>
+    <p>Local 24/25 – 450 MXN</p>
+  </div>
+
+  <div class="jersey-item">
+    <a href="https://wa.me/525570593057" target="_blank">
+      <img src="https://i.postimg.cc/bvJj1KvT/IMG-3510.jpg" alt="Visitante 24/25">
+    </a>
+    <p>Visitante 24/25 – 450 MXN</p>
+  </div>
+
+</div>
+
+<a class="whatsapp-float" href="https://wa.me/525570593057" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
 </body>
 </html>
