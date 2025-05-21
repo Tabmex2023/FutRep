@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club América – FutRep</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .flag {
+      display: block;
+      margin: 20px auto 10px;
+      width: 80px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      width: 250px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      z-index: 1000;
+    }
+
+    @media (min-width: 600px) {
+      nav {
+        display: flex !important;
+        flex-direction: row;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/7Y4tNQGr/futrep-logo.png" alt="FutRep Logo" class="logo">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+  <nav id="nav">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="mexico.html">México</a>
+  </nav>
+
+  <img src="https://i.postimg.cc/3RjYkW1r/mexico-flag.png" alt="Bandera de México" class="flag">
+  <h1>Club América</h1>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://i.postimg.cc/dVyLChpn/america1.jpg" alt="Trikot Heim">
+      <p>Trikot Heim 23/24 – 450 MXN</p>
+    </div>
+    <div class="product">
+      <img src="https://i.postimg.cc/FRz5RTWT/america2.jpg" alt="Trikot Auswärts">
+      <p>Trikot Auswärts 23/24 – 450 MXN</p>
+    </div>
+    <div class="product">
+      <img src="https://i.postimg.cc/Jn7QFf7n/america3.jpg" alt="3. Trikot">
+      <p>3. Trikot 23/24 – 450 MXN</p>
+    </div>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/5216671932357" target="_blank">💬</a>
+</body>
+</html>
